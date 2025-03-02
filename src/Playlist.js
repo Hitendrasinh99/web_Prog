@@ -7,7 +7,7 @@ const Playlist = () => {
   const [currentIndex, setCurrentIndex] = useState(null);
 
   useEffect(() => {
-    fetch("/songs.json")
+    fetch("process.env.PUBLIC_URL + /songs.json")
       .then((response) => response.json())
       .then((data) => {
         if (data.songs && Array.isArray(data.songs)) {
